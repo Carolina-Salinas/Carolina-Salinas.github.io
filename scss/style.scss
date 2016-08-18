@@ -65,14 +65,18 @@ main{
   text-align: center;
   vertical-align: middle;
   width: 100%;
-  z-index: 5
+  z-index: 5;
+  @media only screen and (max-width: 750px) {
+        font-size: 30px;
+}
 
 }
 
-.center p{
+.center .frontend{
   color:$primary-color;
-
-
+   @media only screen and (max-width: 750px) {
+        font-size: 30px;
+}
 }
 
 .photo-cover {
@@ -104,6 +108,7 @@ main{
 .large {
   font-size: 4em;
 }
+
 
 .medium {
   font-size: 2em;
@@ -186,7 +191,7 @@ main{
   margin: 0 auto;
   text-align:center;
   border-radius:100%;
-  border: $color-border 4px dashed;
+  border: $color-border 4px dotted;
   display:inline-block;
   clear:both;
   text-align:center;
@@ -335,6 +340,8 @@ footer h2{
   }
   p{
     font-family: $text-general;
+    margin-bottom: 0px;
+    font-size: 18px;
   }
 
 }
@@ -347,8 +354,11 @@ footer h2{
   z-index:1;
 }
 
-.hability p{
+#grafico.hability p{
   font-size: 21px;
+  font-family: $text-general;
+  margin-bottom: 0px 0px;
+
 }
 
 #grafico h2 .fa, #grafico-2 h2 .fa, #grafico-3 h2 .fa{
@@ -358,22 +368,7 @@ footer h2{
     margin-left:-95px;
   position:relative;
 }
-#grafico h2 .fa:after, #grafico-2 h2 .fa:after, .grafico-2 h2 .fa:after{
-  content:'';
-  border:1px solid rgba(160,160,160,1);
-  top:-12px;
-  left:3px;
-  bottom:-12px;
-  right:-23px;
-  position:absolute;
-  transition:all 0.7s ease-in-out;
-}
-#grafico:hover h2 .fa:after, #grafico-2:hover h2 .fa:after, .grafico-2:hover h2 .fa:after{
-  border:solid 1px $primary-color-shadow;
-  transform:rotate(45deg);
-  -webkit-transform:rotate(45deg);
-  transition:all 0.7s ease-in-out;
-}
+
 #grafico h2 .fa:before, #grafico-2 h2 .fa:before, .grafico-2 h2 .fa:before{
     left:13px;
     position:relative;
@@ -386,7 +381,7 @@ footer h2{
 
 .grafico, .grafico-2{
   width:100%;
-  padding: 0 auto;
+  // padding: 0 auto;
   position:relative;
   z-index:2;
 }
@@ -397,7 +392,7 @@ footer h2{
 #grafico, #grafico-2{
   width:49.9%;
   display:inline-table;
-  padding:20px 50px;
+  padding:50px 50px;
   position:relative;
 }
 #grafico:after, #grafico-2:after{
@@ -405,7 +400,7 @@ footer h2{
     background-color:rgba(160,160,160,0);
   top:30px;
     bottom:20px;
-    left:130px;
+    left:0px;
     right:45px;
     position:absolute;
     z-index:-1;
@@ -415,7 +410,7 @@ footer h2{
     background-color:rgba(160,160,160,0.2);
     top:10px;
     bottom:0;
-    left:110px;
+    left:10px;
     right:25px;
     transition:all 0.5s ease-in-out;
 }
@@ -586,8 +581,3 @@ h3.heading-progress{
     outline: 0;
 }
 
-@media only screen and (max-width: 750px) {
-    .center h1 {
-        font-size: 4em;
-    }
-}
