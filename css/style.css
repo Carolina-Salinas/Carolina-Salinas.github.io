@@ -1,23 +1,25 @@
 @import url(http://fonts.googleapis.com/css?family=Lobster&effect=anaglyph|fire|3d|vintage);
 @import 'https://fonts.googleapis.com/css?family=Rock+Salt';
 @import 'https://fonts.googleapis.com/css?family=Antic+Slab';
+* {
+  outline: 1px solid rgba(255, 0, 0, 0.3);
+}
+
 html,
 body,
 main {
   height: 100%;
 }
 
-::selection {
-  background: #EEC2D2;
-  color: #fff;
-}
-
 .navbar-inverse .navbar-nav > li > a {
   color: #f3f3f3;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
 }
 
 .jumbotron {
   margin-bottom: 0;
+  z-index: 5;
 }
 
 .center {
@@ -25,31 +27,28 @@ main {
   position: relative;
   top: 20%;
   left: 10%;
-  border: 5px dotted #B9D3CF;
-  padding: 0px 5px;
-  background: rgba(61, 59, 61, 0.6);
 }
 
-.center h1 {
-  font-family: "Rock Salt", cursive;
+.center.home-intro h1 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
   font-size: 4em;
-  font-weight: 500;
-  color: #B9D3CF;
-  padding: 30px 20px;
+  color: #DDDFE5;
+  padding: 10px 10px;
   text-align: center;
   vertical-align: middle;
   width: 100%;
-  z-index: 5;
 }
 
 @media only screen and (max-width: 750px) {
-  .center h1 {
+  .center.home-intro h1 {
     font-size: 30px;
   }
 }
 
 .center .frontend {
-  color: #EEC2D2;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
 }
 
 @media only screen and (max-width: 750px) {
@@ -58,10 +57,19 @@ main {
   }
 }
 
+.separator {
+  max-width: 45%;
+}
+
+.separator-white {
+  border-top: solid 3px #f3f3f3;
+  color: #DDDFE5;
+}
+
 .photo-cover {
-  background: url(../image/bordersin.jpg) no-repeat center center/cover fixed;
   height: 100%;
   position: relative;
+  background: transparent;
 }
 
 .photo-cover:before {
@@ -71,24 +79,12 @@ main {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to bottom, #84515F, #51898D);
-  opacity: .8;
-}
-
-.background-primary {
-  background: url(../image/cottoncandy.jpg);
-}
-
-.background-secondary {
-  background: #51898D;
+  background: url("http://s12.postimg.org/ffg3zoj0d/macdesk.jpg") no-repeat center center/cover fixed;
+  -webkit-filter: brightness(50%);
 }
 
 .large {
   font-size: 4em;
-}
-
-.medium {
-  font-size: 2em;
 }
 
 /* Header */
@@ -100,55 +96,26 @@ main {
   transition: all 0.2s ease-in;
 }
 
-.thumbnail {
-  cursor: pointer;
-  position: relative;
-}
-
-.thumbnail-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(82, 80, 82, 0.6);
-  opacity: 0;
-  transition: all 0.2s ease-in;
-}
-
-.thumbnail:hover .thumbnail-overlay {
-  opacity: 1;
-  transition: all 0.2s ease-in;
-}
-
-.full-screen {
-  background: #51898D;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-  overflow-y: scroll;
-}
-
-.close-window {
-  cursor: pointer;
-}
-
 #aboutme {
-  background: url(../image/cottoncandy.jpg);
+  width: 100%;
+  background: transparent;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
-  padding-bottom: 5%;
   background-size: cover;
 }
 
+#aboutme .career {
+  padding: 5% 10%;
+}
+
+#aboutme .career1 {
+  padding: 10% 5%;
+}
+
 #aboutme h2 {
-  font-family: "Antic Slab", serif;
+  font-family: "Lato", sans-serif;
   color: #525052;
-  border-bottom: 5px dotted #525052;
 }
 
 #aboutme p {
@@ -156,8 +123,8 @@ main {
 }
 
 .picture {
-  height: 200px;
-  width: 200px;
+  height: 400px;
+  width: 400px;
   margin: 0 auto;
   text-align: center;
   border-radius: 100%;
@@ -171,11 +138,11 @@ main {
 .view {
   margin: 15px 33px;
   float: left;
-  border: 5px dotted #B9D3CF;
+  border: 5px solid #new_color;
   overflow: hidden;
   position: relative;
   text-align: center;
-  box-shadow: 1px 1px 2px #e6e6;
+  box-shadow: 1px 1px 2px #color-letra-general;
   cursor: default;
   background: #B9D3CF;
 }
@@ -226,7 +193,6 @@ main {
 }
 
 .view-tenth h2 {
-  border: 5px dotted #752439;
   background: transparent;
   margin: 20px 40px 0px 40px;
   transform: scale(0);
@@ -272,7 +238,7 @@ main {
 }
 
 #portafolio {
-  background-color: #51898D;
+  background-color: #16a085;
   padding-top: 30px;
   padding-bottom: 30px;
   z-index: 5;
@@ -281,7 +247,6 @@ main {
 
 #portafolio h2 {
   text-align: center;
-  border-bottom: 3px dotted #f1f1f1;
   padding: 30px;
   font-family: "Antic Slab", serif;
 }
@@ -300,26 +265,27 @@ footer h2 p {
   font-family: "Josefin Sans", sans-serif;
 }
 
-#contenido-1 {
+.contenido-1 {
   background-color: white;
-  padding-top: 140px;
 }
 
-#contenido-1 h3 {
-  font-family: "Antic Slab", serif;
+.contenido-1 h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
 }
 
-#contenido-1 h4 {
-  font-family: "Antic Slab", serif;
+.contenido-1 h4 {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
 }
 
-#contenido-1 p {
+.contenido-1 p {
   font-family: "Josefin Sans", sans-serif;
   margin-bottom: 0px;
   font-size: 18px;
 }
 
-#contenido-1, #descripcion, #contenedor-grafico, #contenedor-grafico-2, #contenido-2, #contenido-3, .blog, .partners-cont {
+#contenido-1, #contenedor-grafico, #contenido-2 {
   width: 98%;
   max-width: 1700px;
   margin: 0 auto;
@@ -333,22 +299,21 @@ footer h2 p {
   margin-bottom: 0px 0px;
 }
 
-#grafico h2 .fa, #grafico-2 h2 .fa, #grafico-3 h2 .fa {
-  color: #8c8c8c;
-  font-size: 44px;
-  float: left;
-  margin-left: -95px;
-  position: relative;
+#grafico h3, h2 {
+  font-family: "Lato", sans-serif;
 }
 
-#grafico h2 .fa:before, #grafico-2 h2 .fa:before, .grafico-2 h2 .fa:before {
+#grafico h3 .fa, #grafico-2 h3 .fa, #grafico-3 h3 .fa {
+  color: #8c8c8c;
+  float: left;
+  margin-left: 5px;
+  position: relative;
+  font-family: "Lato", sans-serif;
+}
+
+#grafico h3 .fa:before, #grafico-2 h3 .fa:before, .grafico-2 h3 .fa:before {
   left: 13px;
   position: relative;
-  transition: all 0.5s ease-in-out;
-}
-
-#grafico:hover h2 .fa:before, #grafico-2:hover h2 .fa:before, .grafico-2:hover h2 .fa:before {
-  color: rgba(82, 80, 82, 0.6);
   transition: all 0.5s ease-in-out;
 }
 
@@ -423,6 +388,7 @@ h3.heading-progress {
 .cont-programas h3 {
   margin-bottom: 8px;
   margin-top: 8px;
+  font-family: "Lato", sans-serif;
 }
 
 .programas {
@@ -431,7 +397,6 @@ h3.heading-progress {
   background: #bebebe;
   display: inline-block;
   margin: 5px;
-  font-weight: bold;
   line-height: 35px;
   text-align: center;
   position: relative;
@@ -551,7 +516,6 @@ h3.heading-progress {
 .linea-3 {
   width: 100%;
   height: 1px;
-  border-bottom: dotted;
   top: -8px;
   left: 0;
 }
@@ -572,4 +536,9 @@ h3.heading-progress {
 .btn:active,
 .btn.active {
   outline: 0;
+}
+
+footer {
+  background: url("../image/macbook.jpg") no-repeat center center/cover fixed;
+  background-size: 100%;
 }
