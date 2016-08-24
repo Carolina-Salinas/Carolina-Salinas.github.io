@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lobster&effect=anaglyph|fire|3d|vintage);
+
 @import 'https://fonts.googleapis.com/css?family=Rock+Salt';
 @import 'https://fonts.googleapis.com/css?family=Antic+Slab';
 
@@ -93,7 +93,7 @@ left: 10%;
 }
 
 .photo-cover {
-  // background: url('http://s12.postimg.org/ffg3zoj0d/macdesk.jpg') no-repeat center center / cover fixed;
+  // background: url('http:') no-repeat center center / cover fixed;
   height: 100%;
   position: relative;
   background:transparent;
@@ -111,7 +111,7 @@ top: 0;
 right: 0;
 bottom: 0;
 left: 0;
-background: url('http://s12.postimg.org/ffg3zoj0d/macdesk.jpg') no-repeat center center / cover fixed;
+background: url('../image/macpc.jpg') no-repeat center center / cover fixed;
 -webkit-filter: brightness(50%);
 }
 
