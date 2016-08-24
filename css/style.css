@@ -555,3 +555,7 @@ footer .separator {
 footer .separator-white {
   border-top: solid 3px #1abc9c;
 }
+
+.copy {
+  background-color: #34495e;
+}
